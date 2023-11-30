@@ -23,7 +23,7 @@ const myServer= http.createServer((req,res)=>
                 res.end(`hi, ${userName}`);
                 break;
             default:
-                res.end("404 not found");
+                res.end("404 Not found");
 
         }
 
