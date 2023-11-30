@@ -6,7 +6,7 @@ const url= require("url");
 const myServer= http.createServer((req,res)=>
 {
     //testing
-    const log=`${Date.now()}: ${req.url}  \t new request received\n`;
+    const log=`${Date.now()}: ${req.method} ${req.url}  \t new request received\n`;
     const myUrl=url.parse(req.url,true)
   console.log(myUrl)
 
@@ -16,7 +16,7 @@ const myServer= http.createServer((req,res)=>
         switch(myUrl.pathname)
         {
             case "/":
-                res.end("homepage");
+                res.end("home page");
                 break;
             case"/about":
                 const userName= myUrl.query.myname;
